@@ -1,0 +1,29 @@
+{
+	"episode1" : {
+	  "title"      : "#01: The First Episode",
+	  "date"       : "30 june 2021",
+	  "audio"      : "../assets/audio/1/episode_1.mp3",
+	  "cover"      : "../assets/episodes/1/episode_1.jpg",
+	  "summary"    : "Episode 1 summary (summary text)",
+	  "highlights" : "Episode 1 highlights (show notes)",
+	  "links"      : "Episode 1 links"
+	},
+	"episode2" : {
+	  "title"      : "#02: The First Episode (Continue)",
+	  "date"       : "3 july 2021",
+	  "audio"      : "../assets/audio/2/episode_2.mp3",
+	  "cover"      : "../assets/episodes/2/episode_2.jpg",
+	  "summary"    : "Episode 2 summary (summary text)",
+	  "highlights" : "Episode 2 highlights (show notes)",
+	  "links"      : "Episode 2 links"
+	},
+	"episode3" : {
+	  "title"      : "#03: Round Midnight",
+	  "date"       : "25 july 2021",
+	  "audio"      : "../assets/audio/3/episode_3.mp3",
+	  "cover"      : "../assets/episodes/3/episode_3.jpg",
+	  "summary"    : "Episode 3 summary (summary text)",
+	  "highlights" : "Episode 3 highlights (show notes)",
+	  "links"      : "Episode 3 links"
+	}
+}
