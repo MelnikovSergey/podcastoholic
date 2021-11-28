@@ -15,6 +15,9 @@
 		</main>
 	</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='js/script.js'></script>
+  <script src="js/timecodes.js"></script>
+  <script src="js/podcasts.js"></script>
+  <script src="js/main.js"></script>
+  <script src='js/data.js'></script>	
 </body>
 </html>
