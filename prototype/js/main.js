@@ -35,6 +35,48 @@
 
 	var audio = document.querySelector(".audioPlayer");
 
+	function batteryController(battery) {
+		if (!battery.charging && audio.duration > 0 && !audio.paused) {
+			if (battery.level > config.battery.lowThreshold) {
+				return;
+			}
+	
+			var isCritical = battery.level <= config.battery.criticalThreshold;
+	
+			if (isCritical) {
+				audio.pause();
+			}
+	
+			if (tests.vibration) {
+				window.navigator.vibrate(isCritical ? config.vibration.criticalThreshold : config.vibration.lowThreshold);
+			}
+	
+			if (tests.notification) {
+				Notification.requestPermission(function(permission) {
+					if (permission !== 'denied') {
+						new Notification(isCritical ? config.notification.criticalThreshold.title : config.notification.lowThreshold.title, {
+								body: isCritical ?
+								config.notification.criticalThreshold.message :
+								config.notification.lowThreshold.message
+							}
+					   );
+					}
+				});
+			}
+		}
+	}
+
+	if (window.navigator.getBattery) {
+		window.navigator.getBattery().then(function(battery){
+			battery.addEventListener('levelchange', batteryController.bind(window, battery));
+			batteryController(battery);
+	   	});
+	
+	} else if (window.navigator.battery) {
+		window.navigator.battery.addEventListener('levelchange', batteryController.bind(window, window.navigator.battery));
+		batteryController(window.navigator.battery);
+	}
+
 	if (tests.proximity) {
 		window.addEventListener('userproximity', function (event) {
 			if (event.near) audio.paused ? audio.play() : audio.pause();
