@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   echo 'Entry point';
 ?>
 
@@ -15,6 +15,7 @@
 		</main>
 	</div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src="js/main.js"></script>
   <script src="js/timecodes.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/modal.js"></script>
