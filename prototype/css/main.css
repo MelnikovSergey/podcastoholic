@@ -1079,8 +1079,25 @@ ul.podcast-links li a:hover {
 }
 
 /* Theme switcher */
+.theme_switcher {
+	position: fixed;
+	right: -112px;
+	top: 50%;
+	transform: translate(-50%) rotate(90deg);
+	z-index: 100;
+}
+
 .theme_switcher ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	list-style-type: none;
+}
+
+.theme_switcher ul li {
+	margin: 10px;
 }
 
 .theme_switcher ul li a {
